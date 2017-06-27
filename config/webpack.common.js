@@ -39,16 +39,19 @@ module.exports = {
           fallbackLoader: 'style-loader',
           loader: 'css-loader?sourceMap'
         })
-      },
+      },  
       {
         test: /\.scss$/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use: [
+          {
+            loader: "to-string-loader"
+          },
+          {
+            loader: "css-loader" // translates CSS into CommonJS
+          }, {
+            loader: "sass-loader" // compiles Sass to CSS
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -66,6 +69,12 @@ module.exports = {
       helpers.root('./src'), // location of your src
       {} // a map of your routes
     ),
+
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
 
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']

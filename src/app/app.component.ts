@@ -4,8 +4,9 @@ import '../assets/scss/styles.scss';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor() {}
+export class App {
+  constructor() { }
 }
