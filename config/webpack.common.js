@@ -39,11 +39,10 @@ module.exports = {
           fallbackLoader: 'style-loader',
           loader: 'css-loader?sourceMap'
         })
-      },  
+      },
       {
         test: /\.scss$/,
-        use: [
-          {
+        use: [{
             loader: "to-string-loader"
           },
           {
@@ -57,6 +56,10 @@ module.exports = {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw-loader'
+      },
+      {
+        test: /bootstrap\/dist\/js\/umd\//,
+        loader: 'imports?jQuery=jquery'
       }
     ]
   },
