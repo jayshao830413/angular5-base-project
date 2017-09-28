@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Login } from './login.component';
 import { LoginService } from './login.service';
-import { routing } from './login.routing';
+import { LoginRoutingModule } from './login-routing.module';
 
 @NgModule({
   imports: [
@@ -12,7 +12,7 @@ import { routing } from './login.routing';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    routing
+    LoginRoutingModule
   ],
   providers: [
     LoginService

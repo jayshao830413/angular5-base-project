@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { User } from './user';
 
@@ -8,7 +9,7 @@ import { User } from './user';
   templateUrl: './login.component.html'
 })
 export class Login {
-  constructor(private fb: FormBuilder, private loginService: LoginService) {
+  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) {
     this.createForm();
   }
 
@@ -21,6 +22,11 @@ export class Login {
       username: ['', Validators.required],
       password: ['', Validators.required]
     })
+
+
+    this.loginForm.valueChanges
+        .filter(data => this.loginForm.valid)
+        .subscribe( data => console.log(JSON.stringify(data)));
   }
 
   onSubmit(event: Event) {
@@ -33,11 +39,14 @@ export class Login {
         this.loginForm.value.password
       );
       this.loginService.authenticate(this.user)
-        .then(response => {
-          console.log(response);
-        }, (error) => {
-          this.errorMessage = error;
-        });
+        .subscribe(
+          response => {
+            this.router.navigate(['/dashboard']);          
+          },
+          error => {
+            console.log(error);
+            this.errorMessage = error.error;
+          });
     }
   }
 }
