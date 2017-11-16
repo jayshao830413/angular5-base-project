@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ModalModule } from 'ngx-bootstrap';
 
 // App is our top level component
 import { App } from './app.component';
@@ -21,7 +22,8 @@ import { App } from './app.component';
     LoginModule,
     CoreModule,
     DashboardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   declarations: [
     App

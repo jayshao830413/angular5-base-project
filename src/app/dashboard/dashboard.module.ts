@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
+import { ModalContentComponent } from './modal/modal-content/modalContent.component';
 
 @NgModule({
     imports: [
@@ -19,10 +20,14 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     providers: [
 
     ],
+    entryComponents: [
+        ModalContentComponent,
+    ],
     declarations: [
         DashboardComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        ModalContentComponent
     ]
 })
 export class DashboardModule {
