@@ -12,7 +12,7 @@ export class HttpService extends HttpClient{
         private loaderService: LoaderService) {
             super(httpHandler);
         };
-    apiUrl = '/chg-management-server/api/';
+    apiUrl = '/idea-backend/api/';
     get(url: string): Observable<any>  {
         this.showLoader();
         return super.get(this.getFullUrl(url))

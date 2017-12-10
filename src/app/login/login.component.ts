@@ -19,10 +19,9 @@ export class Login {
   user: User;
   createForm() {    
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
+      guid: ['', Validators.required],
       password: ['', Validators.required]
-    })
-
+    });
 
     this.loginForm.valueChanges
         .filter(data => this.loginForm.valid)
@@ -35,7 +34,7 @@ export class Login {
     event.preventDefault();
     if(this.loginForm.valid) {
       this.user = new User(
-        this.loginForm.value.username,
+        this.loginForm.value.guid,
         this.loginForm.value.password
       );
       this.loginService.authenticate(this.user)
@@ -44,6 +43,7 @@ export class Login {
             this.router.navigate(['/dashboard']);          
           },
           error => {
+            debugger;
             console.log(error);
             this.errorMessage = error.error;
           });

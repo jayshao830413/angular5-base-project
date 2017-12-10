@@ -9,13 +9,13 @@
         <div class="recovery-notes hidden">Enter the email address for your account and we'll send you instructions to reset your password.</div>
         <fieldset class="fieldset login-sample-fieldset">
             <label class="form-label sample-guid-label">Username</label>
-            <input type="text" class="text-input sample-guid-input" formControlName="username">
+            <input type="text" class="text-input sample-guid-input" formControlName="guid">
             <label class="form-label sample-password-label">Password</label>
             <input type="password" class="text-input sample-password-input" formControlName="password">
-            <span class="form-feedback" *ngIf="formSubmitted && loginForm.invalid && !loginForm.value.username && !loginForm.value.passowrd">Please provide an username and password.</span>
-            <span class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.invalid && !loginForm.value.username && loginForm.value.passowrd">Please enter an username.</span>
-            <span class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.invalid && loginForm.value.username && !loginForm.value.password">Please enter a password.</span>
-            <div class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.value.username && loginForm.value.password && errorMessage !== ''">{{errorMessage}}</div>
+            <span class="form-feedback" *ngIf="formSubmitted && loginForm.invalid && !loginForm.value.guid && !loginForm.value.passowrd">Please provide an username and password.</span>
+            <span class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.invalid && !loginForm.value.guid && loginForm.value.passowrd">Please enter an username.</span>
+            <span class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.invalid && loginForm.value.guid && !loginForm.value.password">Please enter a password.</span>
+            <div class="form-feedback" *ngIf="formSubmitted && loginForm.dirty && loginForm.value.guid && loginForm.value.password && errorMessage !== ''">{{errorMessage}}</div>
         </fieldset>
         <input type="checkbox" class="checkbox remember-me-checkbox" id="check_1" value="check_1" name="checkboxes">
         <label for="check_1">Remember me</label>

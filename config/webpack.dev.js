@@ -2,6 +2,7 @@ var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
     devtool: 'cheap-module-eval-source-map',
@@ -14,14 +15,15 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     plugins: [
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
+        new OpenBrowserPlugin({url: 'http://localhost:4200' })
     ],
 
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
         proxy: {
-            '/chg-management-server/api/': {
+            '/idea-backend/api/': {
                 target: 'http://localhost:8080',
                 secure: false
             }
