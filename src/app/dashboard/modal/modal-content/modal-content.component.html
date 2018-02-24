@@ -1,12 +1,12 @@
 <div class="modal-header">
-    <h4 class="modal-title pull-left">{{title}}</h4>
+    <h4 class="modal-title pull-left">{{ title }}</h4>
     <button type="button" class="close" data-dismiss="modal">
         <i class="appkiticon icon-outline-close" aria-hidden="true"></i>
     </button>
 </div>
 <div class="modal-body">
     <ul *ngIf="list.length">
-        <li *ngFor="let item of list">{{item}}</li>
+        <li *ngFor="let item of list; trackBy $index">{{ item }}</li>
     </ul>
     <div class="buttons-combined pull-right">
         <button class="button button-secondary" type="button">Cancel</button>

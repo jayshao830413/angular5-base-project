@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs/Subscription';
   selector: 'loader',
   templateUrl: './loader.component.html',
 })
-export class LoaderComponent implements OnInit {
+export class LoaderComponent implements OnInit, OnDestroy {
   show = false;
   private subscription: Subscription;
   constructor(private loaderService: LoaderService) {}

@@ -4,8 +4,6 @@
     "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
     "banana-in-box": true,
     "templates-no-negated-async": true,
-    "directive-selector": [true, "attribute", "sg", "camelCase"],
-    "component-selector": [true, "element", "sg", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -24,6 +22,7 @@
     "component-class-suffix": true,
     "directive-class-suffix": true,
     "pipe-impure": true,
+    "import-blacklist": [true, "rxjs"],
     "trailing-comma": [
         true,
         {

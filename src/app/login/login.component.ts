@@ -8,7 +8,7 @@ import { User } from './user';
   styleUrls: ['./login.component.scss'],
   templateUrl: './login.component.html'
 })
-export class Login {
+export class LoginComponent {
   constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) {
     this.createForm();
   }
@@ -39,7 +39,7 @@ export class Login {
       );
       this.loginService.authenticate(this.user)
         .subscribe((response) => {
-          this.router.navigate(['/dashboard']);      
+          this.router.navigate(['/dashboard']);
         }, (error) => {
           console.log(error);
           this.errorMessage = error.error;

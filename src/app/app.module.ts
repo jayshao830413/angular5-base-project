@@ -10,10 +10,10 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ModalModule } from 'ngx-bootstrap';
 
 // App is our top level component
-import { App } from './app.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  bootstrap: [App],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -26,7 +26,7 @@ import { App } from './app.component';
     ModalModule.forRoot(),
   ],
   declarations: [
-    App,
+    AppComponent,
   ],
 })
 export class AppModule { }

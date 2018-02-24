@@ -6,6 +6,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['../assets/styles/app.scss', './app.component.scss'],
   // encapsulation: ViewEncapsulation.None,
 })
-export class App {
+export class AppComponent {
   constructor() { }
 }
