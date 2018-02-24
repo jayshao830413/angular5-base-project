@@ -17,7 +17,6 @@
     "no-unused-css": true,
     "use-life-cycle-interface": true,
     "contextual-life-cycle": true,
-    "trackBy-function": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
