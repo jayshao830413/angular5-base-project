@@ -22,7 +22,7 @@
     "component-class-suffix": true,
     "directive-class-suffix": true,
     "pipe-impure": true,
-    "import-blacklist": [true, "rxjs"],
+    "import-blacklist": [false, "rxjs"],
     "trailing-comma": [
         true,
         {
