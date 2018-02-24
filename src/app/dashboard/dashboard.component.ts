@@ -16,8 +16,10 @@ export class DashboardComponent {
     this.bsModalRef = this.modalService.show(ModalContentComponent);
     this.bsModalRef.content.title = 'Modal with component';
     this.bsModalRef.content.list = list;
-    setTimeout(() => {
-      list.push('PROFIT!!!');
-    }, 2000);
+    setTimeout(
+      () => {
+        list.push('PROFIT!!!');
+      },
+      2000);
   }
 }

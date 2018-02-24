@@ -22,11 +22,14 @@ export class HttpService extends HttpClient {
     this.showLoader();
     return super.get(this.getFullUrl(url))
       .catch(this.onCatch)
-      .do((res: Response) => {
-        this.onSuccess(res);
-      }, (error: any) => {
-        this.onError(error);
-      })
+      .do(
+        (res: Response) => {
+          this.onSuccess(res);
+        },
+        (error: any) => {
+          this.onError(error);
+        }
+      )
       .finally(() => {
         this.onEnd();
       });
@@ -36,11 +39,14 @@ export class HttpService extends HttpClient {
     this.showLoader();
     return super.post(this.getFullUrl(url), paramsObj)
       .catch(this.onCatch)
-      .do((res: Response) => {
-        this.onSuccess(res);
-      }, (error: any) => {
-        this.onError(error);
-      })
+      .do(
+        (res: Response) => {
+          this.onSuccess(res);
+        },
+        (error: any) => {
+          this.onError(error);
+        }
+      )
       .finally(() => {
         this.onEnd();
       });
@@ -50,11 +56,14 @@ export class HttpService extends HttpClient {
     this.showLoader();
     return super.put(this.getFullUrl(url), paramsObj)
       .catch(this.onCatch)
-      .do((res: Response) => {
-        this.onSuccess(res);
-      }, (error: any) => {
-        this.onError(error);
-      })
+      .do(
+        (res: Response) => {
+          this.onSuccess(res);
+        },
+        (error: any) => {
+          this.onError(error);
+        }
+      )
       .finally(() => {
         this.onEnd();
       });

@@ -37,13 +37,15 @@ export class LoginComponent {
         this.loginForm.value.guid,
         this.loginForm.value.password,
       );
-      this.loginService.authenticate(this.user)
-        .subscribe((response) => {
+      this.loginService.authenticate(this.user).subscribe(
+        (response) => {
           this.router.navigate(['/dashboard']);
-        }, (error) => {
+        },
+        (error) => {
           console.log(error);
           this.errorMessage = error.error;
-        });
+        }
+      );
     }
   }
 }
