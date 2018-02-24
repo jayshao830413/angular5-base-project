@@ -57,6 +57,7 @@
     "style-loader": "^0.13.2",
     "to-string-loader": "^1.1.5",
     "tslint": "^5.9.1",
+    "tslint-angular": "^1.1.1",
     "tslint-loader": "^3.5.3",
     "typescript": "~2.4",
     "typing": "^0.1.9",

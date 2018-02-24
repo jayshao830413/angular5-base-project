@@ -1,5 +1,5 @@
 {
-  "extends": ["codelyzer", "tslint-config-airbnb"],
+  "extends": ["tslint-angular", "codelyzer", "tslint-config-airbnb"],
   "rules": {
     "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
     "banana-in-box": true,
@@ -29,8 +29,7 @@
         {
           "esSpecCompliantes": false
         }
-    ],
-    "i18n": [true, "check-id", "check-text"]
+    ]
   },
   "exclude": [
     "node_modules"

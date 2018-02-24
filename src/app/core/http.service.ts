@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
-import {  HttpEvent, 
-          HttpInterceptor, 
-          HttpHandler, 
-          HttpRequest, 
-          HttpClient 
+import {  HttpEvent,
+          HttpInterceptor,
+          HttpHandler,
+          HttpRequest,
+          HttpClient
        } from '@angular/common/http';
 import { LoaderService } from './loader/loader.service';
 
 @Injectable()
-export class HttpService extends HttpClient{
+export class HttpService extends HttpClient {
   constructor(
     httpHandler: HttpHandler,
     private loaderService: LoaderService) {

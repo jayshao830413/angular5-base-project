@@ -17,7 +17,7 @@ export class Login {
   formSubmitted = false;
   errorMessage: string;
   user: User;
-  createForm() {    
+  createForm() {
     this.loginForm = this.fb.group({
       guid: ['', Validators.required],
       password: ['', Validators.required],
@@ -39,7 +39,7 @@ export class Login {
       );
       this.loginService.authenticate(this.user)
         .subscribe((response) => {
-          this.router.navigate(['/dashboard']);          
+          this.router.navigate(['/dashboard']);      
         }, (error) => {
           console.log(error);
           this.errorMessage = error.error;
