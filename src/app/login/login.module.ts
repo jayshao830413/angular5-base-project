@@ -12,13 +12,13 @@ import { LoginRoutingModule } from './login-routing.module';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    LoginRoutingModule
+    LoginRoutingModule,
   ],
   providers: [
-    LoginService
+    LoginService,
   ],
   declarations: [
-    Login
-  ]
+    Login,
+  ],
 })
 export class LoginModule {}

@@ -3,19 +3,19 @@ import { Login } from './login.component';
 import { NgModule } from '@angular/core';
 
 // noinspection TypeScriptValidateTypes
-export const LoginRoutes: Routes = [
+export const loginRoutes: Routes = [
   {
     path: 'login',
-    component: Login
-  }
+    component: Login,
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(LoginRoutes)
+    RouterModule.forChild(loginRoutes),
   ],
   exports: [
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
 export class LoginRoutingModule {}

@@ -4,11 +4,11 @@ import { AppModule } from './app/app.module';
 
 declare var module: any;
 
-if(module.hot) {
+if (module.hot) {
   module.hot.accept();
 }
 
-if(process.env.ENV === 'production') {
+if (process.env.ENV === 'production') {
   enableProdMode();
 }
 

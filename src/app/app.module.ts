@@ -23,10 +23,10 @@ import { App } from './app.component';
     CoreModule,
     DashboardModule,
     AppRoutingModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
   declarations: [
-    App
-  ]
+    App,
+  ],
 })
 export class AppModule { }

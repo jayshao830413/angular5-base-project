@@ -4,22 +4,22 @@ import { LoaderState } from './loader.state';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-    selector: 'loader',
-    templateUrl: './loader.component.html',
+  selector: 'loader',
+  templateUrl: './loader.component.html',
 })
 export class LoaderComponent implements OnInit {
-    show = false;
-    private subscription: Subscription;
-    constructor(private loaderService: LoaderService) {}
+  show = false;
+  private subscription: Subscription;
+  constructor(private loaderService: LoaderService) {}
 
-    ngOnInit() {
-        this.subscription = this.loaderService.loaderState
-            .subscribe((state: LoaderState) => {
-                this.show = state.show;
-            });
-    }
+  ngOnInit() {
+    this.subscription = this.loaderService.loaderState
+      .subscribe((state: LoaderState) => {
+        this.show = state.show;
+      });
+  }
 
-    ngOnDestroy() {
-        this.subscription.unsubscribe();
-    }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

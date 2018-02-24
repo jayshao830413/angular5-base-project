@@ -8,28 +8,27 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
 import { ModalContentComponent } from './modal/modal-content/modalContent.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        DashboardRoutingModule,
-    ],
-    exports: [
-        DashboardComponent
-    ],
-    providers: [
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    DashboardRoutingModule,
+  ],
+  exports: [
+    DashboardComponent,
+  ],
+  providers: [
 
-    ],
-    entryComponents: [
-        ModalContentComponent,
-    ],
-    declarations: [
-        DashboardComponent,
-        HeaderComponent,
-        FooterComponent,
-        ModalContentComponent
-    ]
+  ],
+  entryComponents: [
+    ModalContentComponent,
+  ],
+  declarations: [
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    ModalContentComponent,
+  ],
 })
 export class DashboardModule {
-
 }

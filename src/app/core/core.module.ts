@@ -5,18 +5,12 @@ import { LoaderService } from './loader/loader.service';
 import { HttpService } from './http.service';
 
 @NgModule({
-    imports: [
-        CommonModule
-    ],
-    exports: [
-        LoaderComponent
-    ],
-    declarations: [
-        LoaderComponent
-    ],
-    providers: [
-        LoaderService,
-        HttpService
-    ]
+  imports: [CommonModule],
+  exports: [LoaderComponent],
+  declarations: [LoaderComponent],
+  providers: [
+    LoaderService,
+    HttpService,
+  ],
 })
 export class CoreModule {}

@@ -20,33 +20,30 @@ export class Login {
   createForm() {    
     this.loginForm = this.fb.group({
       guid: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
     });
 
     this.loginForm.valueChanges
         .filter(data => this.loginForm.valid)
-        .subscribe( data => console.log(JSON.stringify(data)));
+        .subscribe(data => console.log(JSON.stringify(data)));
   }
 
   onSubmit(event: Event) {
     this.formSubmitted = true;
     this.errorMessage = '';
     event.preventDefault();
-    if(this.loginForm.valid) {
+    if (this.loginForm.valid) {
       this.user = new User(
         this.loginForm.value.guid,
-        this.loginForm.value.password
+        this.loginForm.value.password,
       );
       this.loginService.authenticate(this.user)
-        .subscribe(
-          response => {
-            this.router.navigate(['/dashboard']);          
-          },
-          error => {
-            debugger;
-            console.log(error);
-            this.errorMessage = error.error;
-          });
+        .subscribe((response) => {
+          this.router.navigate(['/dashboard']);          
+        }, (error) => {
+          console.log(error);
+          this.errorMessage = error.error;
+        });
     }
   }
 }
