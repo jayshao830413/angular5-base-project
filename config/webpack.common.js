@@ -16,7 +16,16 @@ module.exports = {
     },
 
     module: {
-        rules: [{
+        rules: [
+            {
+                test: /\.ts$/,
+                enforce: 'pre',
+                loader: 'tslint-loader',
+                options: {
+                    tsConfigFile: 'tsconfig.json'
+                }
+            },
+            {
                 test: /\.ts$/,
                 loaders: [{
                     loader: 'awesome-typescript-loader',

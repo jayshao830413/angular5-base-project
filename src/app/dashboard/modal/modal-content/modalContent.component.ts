@@ -9,4 +9,5 @@ export class ModalContentComponent {
     public title: string;
     public list: any[] = [];
     constructor(public bsModalRef: BsModalRef) {}
+    
 }
