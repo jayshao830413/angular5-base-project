@@ -4,6 +4,6 @@ import 'rxjs/add/operator/share';
 
 @Injectable()
 export class LoadingService {
-    public status: Subject<boolean> = new Subject();
-    private _active: boolean = true;
+  public status: Subject<boolean> = new Subject();
+  private _active: boolean = true;
 }
